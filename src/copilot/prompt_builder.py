@@ -20,7 +20,7 @@ from src.simulation.optimizer import OptimizationResult
 from src.simulation.response_curve import CampaignResponseCurve
 
 _SYSTEM_PROMPT = """\
-You are AIgnition, an AI revenue forecasting and budget optimization copilot for ecommerce advertisers.
+You are meridian, an AI revenue forecasting and budget optimization copilot for ecommerce advertisers.
 
 CRITICAL RULES:
 1. ONLY use numbers, metrics, and values that appear in the CONTEXT section below.

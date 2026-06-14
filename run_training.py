@@ -1,7 +1,7 @@
 """
 run_training.py
 ===============
-Standalone training entrypoint for AIgnition.
+Standalone training entrypoint for meridian.
 
 Builds the feature store, trains LightGBM P10/P50/P90 quantile models,
 fits Hill saturation curves, runs the budget optimizer, and saves all
@@ -32,7 +32,7 @@ import pandas as pd
 
 
 def _parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Train AIgnition revenue forecasting models")
+    p = argparse.ArgumentParser(description="Train meridian revenue forecasting models")
     p.add_argument("--data-dir",  default="dataset", help="Directory with raw CSV files")
     p.add_argument("--model-dir", default="models",  help="Output directory for model artifacts")
     p.add_argument("--report",    default="evaluation_report.json")
@@ -72,7 +72,7 @@ def main() -> None:
     t0 = time.time()
     print()
     print("=" * 60)
-    print("  AIgnition Training Pipeline")
+    print("  meridian Training Pipeline")
     mode = "production" if args.production else ("fast" if args.fast else "default")
     print(f"  Mode: {mode}")
     print("=" * 60)

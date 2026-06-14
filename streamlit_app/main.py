@@ -1,7 +1,7 @@
 """
 streamlit_app/main.py
 ======================
-AIgnition Streamlit app entry point.
+meridian Streamlit app entry point.
 
 Run with:  streamlit run streamlit_app/main.py
 """
@@ -22,7 +22,7 @@ from streamlit_app.state import (
 )
 
 st.set_page_config(
-    page_title="AIgnition — Revenue Intelligence",
+    page_title="meridian — Revenue Intelligence",
     page_icon="🚀",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -34,7 +34,7 @@ init_session_state()
 # Sidebar — global info
 # --------------------------------------------------------------------------
 with st.sidebar:
-    st.title("🚀 AIgnition")
+    st.title("🚀 meridian")
     st.caption("Ecommerce Revenue Intelligence")
     st.divider()
 
@@ -62,7 +62,7 @@ with st.sidebar:
 # --------------------------------------------------------------------------
 # Homepage content
 # --------------------------------------------------------------------------
-st.title("🚀 AIgnition — Revenue Intelligence Platform")
+st.title("🚀 meridian — Revenue Intelligence Platform")
 st.markdown(
     "**AI-powered ecommerce revenue forecasting and budget optimization "
     "across Google, Meta, and Bing.**"

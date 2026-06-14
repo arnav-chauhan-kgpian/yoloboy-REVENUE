@@ -1,7 +1,7 @@
 """
 src/features/lag_features.py
 =============================
-Campaign-level lag feature generator for the AIgnition forecasting engine.
+Campaign-level lag feature generator for the meridian forecasting engine.
 
 All lags are computed strictly within each campaign_id, sorted by date.
 First N rows per campaign will be NaN for lag-N features (no imputation).

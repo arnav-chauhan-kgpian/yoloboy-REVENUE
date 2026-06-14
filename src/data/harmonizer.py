@@ -1,7 +1,7 @@
 """
 src/data/harmonizer.py
 ======================
-Schema harmonization layer for the AIgnition 2026 marketing mix engine.
+Schema harmonization layer for the meridian 2026 marketing mix engine.
 
 Purpose
 -------

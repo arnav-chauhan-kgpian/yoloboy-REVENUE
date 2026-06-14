@@ -1,10 +1,10 @@
-# Contributing to AIgnition
+# Contributing to meridian
 
 ## Getting Started
 
 ```bash
-git clone https://github.com/your-org/aignition.git
-cd aignition
+git clone https://github.com/your-org/meridian.git
+cd meridian
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```

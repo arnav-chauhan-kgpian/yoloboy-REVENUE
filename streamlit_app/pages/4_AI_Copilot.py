@@ -30,7 +30,7 @@ from src.copilot.risk_detector import RiskDetector
 from src.copilot.recommender import from_optimizer_result, generate_quick_recommendations
 from src.copilot.llm_client import LLMClient
 
-st.set_page_config(page_title="AI Copilot — AIgnition", layout="wide")
+st.set_page_config(page_title="AI Copilot — meridian", layout="wide")
 init_session_state()
 
 st.title("🤖 AI Copilot")

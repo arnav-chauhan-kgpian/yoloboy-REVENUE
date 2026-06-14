@@ -1,14 +1,14 @@
 # Judge Evaluation Guide
 
-This guide helps you evaluate AIgnition in under 5 minutes.
+This guide helps you evaluate meridian in under 5 minutes.
 
 ---
 
 ## 1-Minute Setup
 
 ```bash
-git clone https://github.com/your-org/aignition.git
-cd aignition
+git clone https://github.com/your-org/meridian.git
+cd meridian
 pip install -r requirements.txt
 python demo.py --demo    # loads pre-built artifacts, opens Streamlit
 ```
@@ -62,7 +62,7 @@ pytest tests/ -q
 
 ```bash
 # Docker
-docker build -t aignition . && docker run -p 8501:8501 aignition
+docker build -t meridian . && docker run -p 8501:8501 meridian
 # Open http://localhost:8501
 ```
 

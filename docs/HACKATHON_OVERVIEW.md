@@ -1,4 +1,4 @@
-# AIgnition — Hackathon Overview
+# meridian — NetElixir AIgnition 3.0 Submission
 
 ## The Problem
 
@@ -6,7 +6,7 @@ Ecommerce brands running ads across Google, Meta, and Bing have no unified view 
 
 ## The Solution
 
-AIgnition is a full-stack revenue intelligence platform that:
+meridian is a full-stack revenue intelligence platform that:
 
 1. **Forecasts** daily revenue per campaign with calibrated uncertainty (P10/P50/P90) using LightGBM quantile regression
 2. **Identifies** which campaigns are at saturation and which have headroom using Hill curve fitting

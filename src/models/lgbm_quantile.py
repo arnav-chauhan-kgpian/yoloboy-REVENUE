@@ -63,7 +63,7 @@ _META_FILENAME: Final[str] = "model_meta.pkl"
 class QuantileConfig:
     """LightGBM hyperparameters tuned for ecommerce revenue quantile regression.
 
-    Recommended settings for the production AIgnition dataset (25 k rows,
+    Recommended settings for the production meridian dataset (25 k rows,
     136 campaigns, strong BFCM seasonality, Bing zero-inflation):
 
     - ``num_leaves=63``: expressive enough for interaction effects without

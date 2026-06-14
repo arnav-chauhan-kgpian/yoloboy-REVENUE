@@ -1,7 +1,7 @@
 """
 src/features/feature_store.py
 ==============================
-Final training feature matrix builder for the AIgnition forecasting engine.
+Final training feature matrix builder for the meridian forecasting engine.
 
 Joins all feature sources into a single flat DataFrame ready for LightGBM:
 

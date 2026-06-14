@@ -1,7 +1,7 @@
 """
 src/data/taxonomy_parser.py
 ============================
-Campaign taxonomy parsing layer for the AIgnition 2026 marketing mix engine.
+Campaign taxonomy parsing layer for the meridian 2026 marketing mix engine.
 
 Purpose
 -------

@@ -1,7 +1,7 @@
 """
 src/features/holiday_calendar.py
 =================================
-Ecommerce holiday calendar generator for the AIgnition forecasting engine.
+Ecommerce holiday calendar generator for the meridian forecasting engine.
 
 Produces a daily DataFrame covering US Federal Holidays and key ecommerce
 events (BFCM, Prime Day, Back-to-School, Holiday Season) with proximity

@@ -1,5 +1,5 @@
 """
-demo.py — AIgnition 2026 Hackathon Demo
+demo.py — meridian 2026 Hackathon Demo
 =========================================
 Full demo (trains model on first run):
     python demo.py
@@ -398,7 +398,7 @@ def _demo_mode_load() -> bool:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="AIgnition Demo Launcher")
+    parser = argparse.ArgumentParser(description="meridian Demo Launcher")
     parser.add_argument(
         "--demo",
         action="store_true",

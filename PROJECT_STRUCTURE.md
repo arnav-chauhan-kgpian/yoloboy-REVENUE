@@ -1,7 +1,7 @@
 # Project Structure
 
 ```
-aignition/
+meridian/
 │
 ├── demo.py                     One-command pipeline launcher
 │                               python demo.py          # full pipeline + Streamlit

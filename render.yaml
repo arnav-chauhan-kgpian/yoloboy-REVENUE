@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: aignition
+    name: meridian
     runtime: python
     region: oregon
     plan: free

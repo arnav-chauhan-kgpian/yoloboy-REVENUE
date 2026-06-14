@@ -26,7 +26,7 @@ from streamlit_app.components.campaign_tables import (
     saturation_color,
 )
 
-st.set_page_config(page_title="Campaign Analysis — AIgnition", layout="wide")
+st.set_page_config(page_title="Campaign Analysis — meridian", layout="wide")
 init_session_state()
 
 st.title("📊 Campaign Analysis")

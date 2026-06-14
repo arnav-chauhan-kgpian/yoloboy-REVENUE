@@ -32,7 +32,7 @@ _spec.loader.exec_module(_demo)
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build AIgnition artifacts for deployment")
+    parser = argparse.ArgumentParser(description="Build meridian artifacts for deployment")
     parser.add_argument("--fast", action="store_true",
                         help="Fast training config (n_estimators=200, 2 folds)")
     args = parser.parse_args()
@@ -65,7 +65,7 @@ def main() -> None:
     t0 = time.time()
     print()
     print("=" * 60)
-    print("  AIgnition — Artifact Builder")
+    print("  meridian — Artifact Builder")
     print("=" * 60)
 
     fs           = _demo.step_feature_store()

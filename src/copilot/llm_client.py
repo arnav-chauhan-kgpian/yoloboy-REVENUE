@@ -1,7 +1,7 @@
 """
 src/copilot/llm_client.py
 ==========================
-LLM client for the AIgnition AI copilot.
+LLM client for the meridian AI copilot.
 
 Uses the Groq API (llama-3.3-70b-versatile by default — fast, free tier
 available) via the OpenAI-compatible Groq Python SDK.
@@ -77,7 +77,7 @@ class _RuleBasedCopilot:
         if question and self._is_meta_question(question):
             return CopilotOutput(
                 summary=(
-                    "I'm AIgnition's AI Copilot — a rule-based analytics assistant "
+                    "I'm meridian's AI Copilot — a rule-based analytics assistant "
                     "(Groq LLM mode off). I analyse your marketing data and surface "
                     "revenue forecasts, budget recommendations, and campaign risks. "
                     "Set GROQ_API_KEY to enable full conversational AI answers."

@@ -26,7 +26,7 @@ from streamlit_app.components.budget_charts import (
 from src.simulation.scenario_generator import apply_scenario, compare_scenarios, generate_standard_scenarios
 from src.simulation.optimizer import optimize_budget
 
-st.set_page_config(page_title="Budget Simulator — AIgnition", layout="wide")
+st.set_page_config(page_title="Budget Simulator — meridian", layout="wide")
 init_session_state()
 
 st.title("💰 Budget Simulator")

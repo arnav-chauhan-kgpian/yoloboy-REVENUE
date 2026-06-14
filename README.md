@@ -1,9 +1,13 @@
-# AIgnition — Ecommerce Revenue Intelligence Platform
+# meridian — Ecommerce Revenue Intelligence Platform
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Submission-NetElixir%20AIgnition%203.0-6366f1?style=for-the-badge" />
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/Streamlit-1.35+-FF4B4B?logo=streamlit&logoColor=white" />
-  <img src="https://img.shields.io/badge/LightGBM-quantile-green?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PC9zdmc+" />
+  <img src="https://img.shields.io/badge/LightGBM-quantile-green" />
   <img src="https://img.shields.io/badge/Groq-llama--3.3--70b-purple" />
   <img src="https://img.shields.io/badge/License-MIT-yellow" />
   <img src="https://img.shields.io/badge/tests-1050%20passing-brightgreen" />
@@ -14,6 +18,13 @@
   <strong>AI-powered revenue forecasting, budget optimization, and copilot intelligence<br/>
   for Google Ads · Meta Ads · Bing Ads — all in one Streamlit dashboard.</strong>
 </p>
+
+---
+
+> **Hackathon submission** for [NetElixir AIgnition 3.0](https://www.netelixir.com/aignition/).
+> meridian turns raw ad platform exports into an end-to-end revenue intelligence system —
+> forecast uncertainty, saturation-aware budget optimization, real-time simulation,
+> and grounded AI explanations, deployed in a single command.
 
 ---
 
@@ -80,8 +91,8 @@ flowchart TB
 ## Quick Start
 
 ```bash
-git clone https://github.com/your-org/aignition.git
-cd aignition
+git clone https://github.com/your-org/meridian.git
+cd meridian
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python demo.py          # trains model + launches Streamlit (~3 min first run)
@@ -105,8 +116,8 @@ python demo.py --demo   # loads artifacts, starts Streamlit in <5s
 
 ```bash
 # 1. Clone
-git clone https://github.com/your-org/aignition.git
-cd aignition
+git clone https://github.com/your-org/meridian.git
+cd meridian
 
 # 2. Virtual environment
 python -m venv .venv
@@ -186,41 +197,6 @@ streamlit run streamlit_app/main.py
 | **Budget Simulator** | Real-time revenue projection when platform budgets change |
 | **Campaign Analysis** | Hill saturation curves, budget utilization, TM vs. NTM |
 | **AI Copilot** | Grounded AI analysis + conversational chat |
-
----
-
-## Deploy to Render
-
-### One-click deploy
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
-
-### Manual deploy
-
-1. Push to GitHub
-2. Create a new **Web Service** on [render.com](https://render.com)
-3. Connect your repository
-4. Render auto-detects `render.yaml` — no manual config needed
-5. Add `GROQ_API_KEY` in the Render environment variables panel
-6. Deploy
-
-Build command (auto-configured via `render.yaml`):
-```bash
-pip install -r requirements.txt && python build_artifacts.py --fast
-```
-
-Start command:
-```bash
-streamlit run streamlit_app/main.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
-```
-
-### Docker
-
-```bash
-docker build -t aignition .
-docker run -p 8501:8501 -e GROQ_API_KEY=gsk_... aignition
-# Open http://localhost:8501
-```
 
 ---
 

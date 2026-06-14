@@ -29,7 +29,7 @@ from streamlit_app.components.forecast_charts import (
 )
 from src.models.trainer import get_feature_columns
 
-st.set_page_config(page_title="Forecast — AIgnition", layout="wide")
+st.set_page_config(page_title="Forecast — meridian", layout="wide")
 init_session_state()
 
 st.title("📈 Revenue Forecast")

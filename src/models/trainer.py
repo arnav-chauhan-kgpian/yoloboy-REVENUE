@@ -1,7 +1,7 @@
 """
 src/models/trainer.py
 ======================
-Full training pipeline for the AIgnition revenue forecasting system.
+Full training pipeline for the meridian revenue forecasting system.
 
 Workflow
 --------
@@ -249,7 +249,7 @@ def train(
     config: QuantileConfig | None = None,
     validator_kwargs: dict[str, Any] | None = None,
 ) -> TrainingResult:
-    """Train the AIgnition revenue quantile forecasting model.
+    """Train the meridian revenue quantile forecasting model.
 
     Parameters
     ----------

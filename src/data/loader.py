@@ -1,7 +1,7 @@
 """
 src/data/loader.py
 ==================
-Raw data ingestion layer for the AIgnition 2026 marketing mix intelligence
+Raw data ingestion layer for the meridian 2026 marketing mix intelligence
 engine.
 
 Purpose

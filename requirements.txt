@@ -1,4 +1,4 @@
-# AIgnition — Runtime dependencies
+# meridian — Runtime dependencies
 # Install with:  pip install -r requirements.txt
 
 # Core data

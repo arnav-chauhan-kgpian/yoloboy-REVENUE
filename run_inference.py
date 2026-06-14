@@ -1,7 +1,7 @@
 """
 run_inference.py
 ================
-Standalone inference entrypoint for AIgnition.
+Standalone inference entrypoint for meridian.
 
 Loads pre-trained models, generates P10/P50/P90 forecasts for the most
 recent N days of every campaign, and optionally appends an autoregressive
@@ -36,7 +36,7 @@ sys.path.insert(0, str(ROOT))
 
 
 def _parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Generate AIgnition revenue forecasts")
+    p = argparse.ArgumentParser(description="Generate meridian revenue forecasts")
     p.add_argument("--model-dir",    default="models",
                    help="Directory containing trained model artifacts")
     p.add_argument("--data-dir",     default="dataset",
@@ -82,7 +82,7 @@ def main() -> None:
     t0 = time.time()
     print()
     print("=" * 60)
-    print("  AIgnition Inference Pipeline")
+    print("  meridian Inference Pipeline")
     print("=" * 60)
 
     # ------------------------------------------------------------------

@@ -12,7 +12,7 @@ python demo.py --demo
 
 ## Minute 1 — Home Page (KPIs + Optimization Lift)
 
-**Say:** "This is AIgnition — it forecasts revenue and optimises budget allocation across Google, Meta, and Bing."
+**Say:** "This is meridian — it forecasts revenue and optimises budget allocation across Google, Meta, and Bing."
 
 **Show:**
 - Daily Revenue metric (e.g. $13,200/day)
@@ -90,7 +90,7 @@ python demo.py --demo
 
 ## Close
 
-"AIgnition turns raw ad platform exports into an end-to-end revenue intelligence system: forecast uncertainty, saturation-aware optimization, real-time simulation, and grounded AI explanations — deployed in one command."
+"meridian turns raw ad platform exports into an end-to-end revenue intelligence system: forecast uncertainty, saturation-aware optimization, real-time simulation, and grounded AI explanations — deployed in one command."
 
 ```bash
 python demo.py        # full pipeline
