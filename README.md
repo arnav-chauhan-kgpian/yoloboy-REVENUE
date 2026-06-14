@@ -112,8 +112,8 @@ Reads CSVs from `data/`, generates features, runs the model, writes `predictions
 The scoring team drops held-out CSVs into `data/` and runs one command:
 
 ```bash
-git clone https://github.com/your-org/meridian.git
-cd meridian
+git clone https://github.com/arnav-chauhan-kgpian/yoloboy-REVENUE.git
+cd yoloboy-REVENUE
 pip install -r requirements.txt
 
 # Replace sample data with held-out test CSVs (same schema)
@@ -158,8 +158,8 @@ The [`docs/JUDGE_GUIDE.md`](docs/JUDGE_GUIDE.md) has a 5-minute walkthrough of a
 ## Quick Start
 
 ```bash
-git clone https://github.com/your-org/meridian.git
-cd meridian
+git clone https://github.com/arnav-chauhan-kgpian/yoloboy-REVENUE.git
+cd yoloboy-REVENUE
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python demo.py          # trains model + launches Streamlit (~3 min first run)
@@ -183,8 +183,8 @@ python demo.py --demo   # loads artifacts, starts Streamlit in <5s
 
 ```bash
 # 1. Clone
-git clone https://github.com/your-org/meridian.git
-cd meridian
+git clone https://github.com/arnav-chauhan-kgpian/yoloboy-REVENUE.git
+cd yoloboy-REVENUE
 
 # 2. Virtual environment
 python -m venv .venv
