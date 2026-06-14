@@ -60,6 +60,7 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 # Canonical file names
 # ---------------------------------------------------------------------------
+# src/data/loader.py -> src/data -> src -> project root
 _PROJECT_ROOT: Final[Path] = Path(__file__).resolve().parents[2]
 _DEFAULT_DATA_DIR: Final[Path] = _PROJECT_ROOT / "dataset"
 _FALLBACK_DATA_DIR: Final[Path] = _PROJECT_ROOT / "data"
@@ -359,6 +360,7 @@ class DataLoader:
         if not path.exists():
             if self._data_dir.resolve() == _DEFAULT_DATA_DIR and _FALLBACK_DATA_DIR.exists():
                 fallback_path = (_FALLBACK_DATA_DIR / filename).resolve()
+                # Fall back only when the specific expected CSV is present.
                 if fallback_path.exists():
                     logger.warning(
                         "Using fallback file for %s: '%s' (requested from '%s').",
