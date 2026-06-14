@@ -208,14 +208,22 @@ def _update_calendar_features(row: pd.Series, date: pd.Timestamp) -> pd.Series:
     """Overwrite calendar fields in *row* for *date*."""
     row = row.copy()
     idx = row.index
-    if "date"         in idx: row["date"]         = date
-    if "day_of_week"  in idx: row["day_of_week"]  = date.dayofweek
-    if "day_of_month" in idx: row["day_of_month"] = date.day
-    if "week_of_year" in idx: row["week_of_year"] = int(date.isocalendar()[1])
-    if "month"        in idx: row["month"]         = date.month
-    if "quarter"      in idx: row["quarter"]       = (date.month - 1) // 3 + 1
-    if "year"         in idx: row["year"]          = date.year
-    if "is_weekend"   in idx: row["is_weekend"]    = int(date.dayofweek >= 5)
+    if "date" in idx:
+        row["date"] = date
+    if "day_of_week" in idx:
+        row["day_of_week"] = date.dayofweek
+    if "day_of_month" in idx:
+        row["day_of_month"] = date.day
+    if "week_of_year" in idx:
+        row["week_of_year"] = int(date.isocalendar()[1])
+    if "month" in idx:
+        row["month"] = date.month
+    if "quarter" in idx:
+        row["quarter"] = (date.month - 1) // 3 + 1
+    if "year" in idx:
+        row["year"] = date.year
+    if "is_weekend" in idx:
+        row["is_weekend"] = int(date.dayofweek >= 5)
     return row
 
 

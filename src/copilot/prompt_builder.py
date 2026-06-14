@@ -11,7 +11,10 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass, field
-from typing import Any
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 from src.copilot.insight_engine import Insight
 from src.copilot.risk_detector import Risk

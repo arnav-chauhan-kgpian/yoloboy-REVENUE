@@ -21,7 +21,10 @@ import json
 import logging
 import os
 from dataclasses import dataclass
-from typing import Any
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 from src.copilot.insight_engine import Insight
 from src.copilot.prompt_builder import (

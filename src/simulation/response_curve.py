@@ -94,7 +94,7 @@ def _current_spend_revenue(
     window_days: int = CURRENT_SPEND_WINDOW_DAYS,
 ) -> tuple[float, float]:
     """Return trailing-window average daily (spend, revenue) for a campaign."""
-    mature = campaign_df[campaign_df.get("attribution_mature", True) == True] \
+    mature = campaign_df[campaign_df["attribution_mature"]] \
         if "attribution_mature" in campaign_df.columns \
         else campaign_df
 

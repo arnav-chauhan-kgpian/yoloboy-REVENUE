@@ -20,7 +20,6 @@ What it does:
 from __future__ import annotations
 
 import argparse
-import os
 import pickle
 import subprocess
 import sys

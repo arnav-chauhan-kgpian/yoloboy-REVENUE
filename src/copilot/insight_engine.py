@@ -311,7 +311,6 @@ class InsightEngine:
             return insights
 
         latest_date = fs["date"].max()
-        future_cutoff = latest_date + pd.Timedelta(days=lookahead_days)
 
         # Use data near end of known period as proxy for upcoming intensity
         tail = fs[fs["date"] >= latest_date - pd.Timedelta(days=7)]

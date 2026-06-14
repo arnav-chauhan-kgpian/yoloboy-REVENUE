@@ -23,7 +23,6 @@ Output directories:
 from __future__ import annotations
 
 import argparse
-import json
 import pickle
 import time
 from pathlib import Path
@@ -45,14 +44,14 @@ def _parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
-    args = parse_args = _parse_args()
+    args = _parse_args()
 
     data_dir  = Path(args.data_dir)
     model_dir = Path(args.model_dir)
     model_dir.mkdir(parents=True, exist_ok=True)
     data_dir.mkdir(parents=True, exist_ok=True)
 
-    from src.models.lgbm_quantile import QuantileConfig, RevenueQuantileModel
+    from src.models.lgbm_quantile import QuantileConfig
     from src.models.trainer import train, get_feature_columns
     from src.simulation.response_curve import build_response_curves
     from src.simulation.optimizer import optimize_budget

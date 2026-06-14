@@ -160,7 +160,6 @@ def optimize_budget(
     }
 
     ordered_curves = list(curves.values())
-    campaign_ids   = [c.campaign_id for c in ordered_curves]
 
     # Build bounds
     bounds_list = []
