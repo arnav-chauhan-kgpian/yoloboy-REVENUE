@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: aignition
+    runtime: python
+    region: oregon
+    plan: free
+
+    buildCommand: pip install -r requirements.txt
+
+    startCommand: >
+      streamlit run streamlit_app/main.py
+      --server.port $PORT
+      --server.address 0.0.0.0
+      --server.headless true
+      --browser.gatherUsageStats false
+
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PYTHONPATH
+        value: .
+      - key: PYTHON_VERSION
+        value: "3.11.9"

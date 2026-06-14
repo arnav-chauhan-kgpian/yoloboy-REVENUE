@@ -1,0 +1,32 @@
+name: Lint
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install ruff
+        run: pip install ruff
+
+      - name: Lint src/
+        run: ruff check src/ --ignore E501,E402,F401
+
+      - name: Lint streamlit_app/
+        run: ruff check streamlit_app/ --ignore E501,E402,F401
+
+      - name: Lint entrypoints
+        run: ruff check demo.py run_training.py run_inference.py build_artifacts.py --ignore E501,E402
