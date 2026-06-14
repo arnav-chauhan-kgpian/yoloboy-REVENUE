@@ -105,6 +105,56 @@ Reads CSVs from `data/`, generates features, runs the model, writes `predictions
 
 ---
 
+## How Judges Evaluate This Project
+
+### 1. Automated scoring (CLI pipeline)
+
+The scoring team drops held-out CSVs into `data/` and runs one command:
+
+```bash
+git clone https://github.com/your-org/meridian.git
+cd meridian
+pip install -r requirements.txt
+
+# Replace sample data with held-out test CSVs (same schema)
+cp /path/to/test/google_ads_campaign_stats.csv  data/
+cp /path/to/test/meta_ads_campaign_stats.csv    data/
+cp /path/to/test/bing_campaign_stats.csv        data/
+
+# Run the full pipeline
+./run.sh ./data ./pickle/model.pkl ./output/predictions.csv
+```
+
+Output file: `output/predictions.csv`
+
+| Column | Description |
+|---|---|
+| `date` | Forecast date |
+| `campaign_id` | Campaign identifier |
+| `campaign_name` | Campaign name |
+| `platform` | `google` / `meta` / `bing` |
+| `p10` | 10th-percentile revenue forecast |
+| `p50` | Median revenue forecast |
+| `p90` | 90th-percentile revenue forecast |
+
+The model (`pickle/model.pkl`) is pre-trained and committed — no training happens at scoring time.
+
+### 2. Live demo (dashboard evaluation)
+
+Open the Streamlit dashboard directly:
+
+**Live demo:** [https://meridian-z3nw.onrender.com](https://meridian-z3nw.onrender.com)
+
+Or run locally:
+
+```bash
+python demo.py --demo   # loads pre-built artifacts, starts in <5s
+```
+
+The [`docs/JUDGE_GUIDE.md`](docs/JUDGE_GUIDE.md) has a 5-minute walkthrough of all five pages.
+
+---
+
 ## Quick Start
 
 ```bash
