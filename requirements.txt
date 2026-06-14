@@ -1,27 +1,23 @@
-# meridian — Runtime dependencies
-# Install with:  pip install -r requirements.txt
+# meridian — pinned dependencies
+# Python 3.11.9
+# Install: pip install -r requirements.txt
 
-# Core data
-pandas>=2.0.0
-numpy>=1.24.0
-pyarrow>=12.0.0          # parquet read/write
+# Core inference (required for run.sh / scoring pipeline)
+pandas==2.3.3
+numpy==2.4.1
+lightgbm==4.6.0
+scipy==1.17.0
+scikit-learn==1.5.2
+pyarrow==22.0.0
+python-dotenv==1.2.2
 
-# Machine learning
-lightgbm>=4.0.0
-scipy>=1.11.0            # curve_fit (Hill), minimize (SLSQP)
-scikit-learn>=1.3.0      # optional utilities
-
-# Visualisation & app
+# Dashboard (required for streamlit_app/)
 streamlit>=1.35.0
-plotly>=5.18.0
+plotly==6.5.2
 
-# AI Copilot (optional — enables Groq LLM analysis)
+# AI Copilot (optional — enables Groq LLM; rule-based fallback works without it)
 groq>=0.9.0
-python-dotenv>=1.0.0     # loads .env into os.environ at startup
 
 # Testing
-pytest>=7.4.0
+pytest==8.4.2
 pytest-cov>=4.1.0
-
-# Development utilities
-fastparquet>=2023.10.0   # alternative parquet backend (optional)

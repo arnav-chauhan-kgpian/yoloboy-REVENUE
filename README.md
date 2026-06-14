@@ -90,6 +90,21 @@ flowchart TB
 
 ---
 
+## Scoring Pipeline (NetElixir AIgnition 3.0)
+
+```bash
+./run.sh [DATA_DIR] [MODEL_PATH] [OUTPUT_PATH]
+
+# Defaults:
+./run.sh ./data ./pickle/model.pkl ./output/predictions.csv
+```
+
+Reads CSVs from `data/`, generates features, runs the model, writes `predictions.csv`. The pipeline drops in held-out test CSVs at `data/` and scores the output.
+
+**Python version: 3.11.9**
+
+---
+
 ## Quick Start
 
 ```bash
