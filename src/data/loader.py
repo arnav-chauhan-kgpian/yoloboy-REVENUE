@@ -13,7 +13,9 @@ container.
 
 Assumptions
 -----------
-- All three files live in a single directory (default: ``dataset/``).
+- All three files live in a single directory (default: ``dataset/``). If the
+  default ``dataset/`` path is present but does not contain CSVs, the loader
+  falls back to ``data/`` (repository sample data).
 - Column names match those confirmed during forensic analysis of the actual
   files.  Any deviation raises DataLoadError immediately.
 - Every file contains an ``Unnamed: 0`` column — a pandas ``to_csv`` index
@@ -58,6 +60,10 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 # Canonical file names
 # ---------------------------------------------------------------------------
+_PROJECT_ROOT: Final[Path] = Path(__file__).resolve().parents[2]
+_DEFAULT_DATA_DIR: Final[Path] = _PROJECT_ROOT / "dataset"
+_FALLBACK_DATA_DIR: Final[Path] = _PROJECT_ROOT / "data"
+
 GOOGLE_FILENAME: Final[str] = "google_ads_campaign_stats.csv"
 META_FILENAME: Final[str] = "meta_ads_campaign_stats.csv"
 BING_FILENAME: Final[str] = "bing_campaign_stats.csv"
@@ -351,6 +357,16 @@ class DataLoader:
         """
         path = (self._data_dir / filename).resolve()
         if not path.exists():
+            if self.data_dir == _DEFAULT_DATA_DIR and _FALLBACK_DATA_DIR.exists():
+                fallback_path = (_FALLBACK_DATA_DIR / filename).resolve()
+                if fallback_path.exists():
+                    logger.warning(
+                        "Using fallback file for %s: '%s' (requested from '%s').",
+                        platform,
+                        fallback_path,
+                        path,
+                    )
+                    return fallback_path
             raise FileNotFoundError(
                 f"{platform}: expected file not found.\n"
                 f"  expected : '{path}'\n"
