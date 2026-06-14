@@ -25,6 +25,8 @@
 > meridian turns raw ad platform exports into an end-to-end revenue intelligence system —
 > forecast uncertainty, saturation-aware budget optimization, real-time simulation,
 > and grounded AI explanations, deployed in a single command.
+>
+> **Live demo:** [https://meridian-z3nw.onrender.com](https://meridian-z3nw.onrender.com)
 
 ---
 
