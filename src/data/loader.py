@@ -357,7 +357,7 @@ class DataLoader:
         """
         path = (self._data_dir / filename).resolve()
         if not path.exists():
-            if self.data_dir == _DEFAULT_DATA_DIR and _FALLBACK_DATA_DIR.exists():
+            if self._data_dir.resolve() == _DEFAULT_DATA_DIR and _FALLBACK_DATA_DIR.exists():
                 fallback_path = (_FALLBACK_DATA_DIR / filename).resolve()
                 if fallback_path.exists():
                     logger.warning(
