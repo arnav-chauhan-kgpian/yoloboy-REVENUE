@@ -268,6 +268,12 @@ class TestDataLoaderInit:
 class TestLoadRawDataConvenience:
     """Tests for the module-level load_raw_data() convenience function."""
 
+    def test_default_dir_loads_sample_data(self) -> None:
+        """Default load should succeed with repository sample CSVs."""
+        result = load_raw_data()
+        assert isinstance(result, RawDataset)
+        assert not result.is_empty()
+
     def test_returns_rawdataset_instance(self, data_dir: Path) -> None:
         """load_raw_data() must return a RawDataset."""
         result = load_raw_data(data_dir)
